@@ -3,7 +3,8 @@ import pymysql
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('mysql+pymysql://root:root@localhost:3306/kareoke')
+engine = create_engine("sqlite:///./database.db",
+                       connect_args={"check_same_thread": False})
 SessionLocal = sessionmaker(bind=engine)
 
 
