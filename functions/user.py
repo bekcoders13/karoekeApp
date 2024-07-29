@@ -68,4 +68,4 @@ def create_admin_f(form, db, user):
         )
         save_in_db(db, new_add)
     else:
-        raise HTTPException(400, "You can't !!!")
+        raise HTTPException(400, "You can not !!!")
